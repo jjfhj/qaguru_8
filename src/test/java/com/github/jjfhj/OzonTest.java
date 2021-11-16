@@ -4,6 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static com.codeborne.selenide.Condition.text;
@@ -35,5 +36,15 @@ public class OzonTest extends TestBase {
         $("[name='text']").setValue("Вторая жизнь Уве").submit();
         $$(".ui-D6").findBy(text(filterСheckbox)).click();
         $("[class='ui-l5 ui-l6']").shouldHave(text(tagName));
+    }
+
+    @EnumSource(ProfileMenu.class)
+    @DisplayName("1")
+    @Tag("1")
+    @Tag("1")
+    @ParameterizedTest(name = "{0}")
+    void checkingDisplayOfAnonymousMenuItem(String menuItem) {
+        open("https://www.ozon.ru/");
+        $(".g5j6").shouldHave(text(menuItem));
     }
 }
