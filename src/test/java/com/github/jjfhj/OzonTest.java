@@ -25,8 +25,8 @@ public class OzonTest extends TestBase {
     void checkingBookInSearchResults(String searchQuery) {
         open("https://www.ozon.ru/");
         $("[name='text']").setValue("Все о Муми-троллях").submit();
-        $(".a9x3").shouldHave(text(searchQuery));
-        //$$("[class='b3a6 a3m3']").shouldHave(texts(searchQuery));
+        //$(".a9x3").shouldHave(text(searchQuery));
+        $$("[class='b3a6 a3m3']").shouldHave(texts(searchQuery));
     }
 
     @CsvSource({
