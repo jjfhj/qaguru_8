@@ -13,9 +13,10 @@ import static com.codeborne.selenide.Selenide.*;
 public class OzonTest extends TestBase {
 
     @ValueSource(strings = {"Всё о Муми-троллях. Книга 1", "Всё о Муми-троллях. Книга 2"})
-    @DisplayName("Отображение результатов поиска")
+    @DisplayName("Результаты поиска")
     @Tag("Blocker")
     @Tag("High")
+    @Tag("Web")
     @ParameterizedTest(name = "Отображение товара {0} в результатах поиска")
     void checkingBookInSearchResults(String searchQuery) {
         open("https://www.ozon.ru/");
@@ -27,9 +28,10 @@ public class OzonTest extends TestBase {
             "Мягкая обложка, Обложка: Мягкая обложка",
             "Твердый переплет, Обложка: Твердый переплет"
     })
-    @DisplayName("Отображение тега фильтра 'Обложка'")
+    @DisplayName("Теги фильтра 'Обложка'")
     @Tag("Minor")
     @Tag("Low")
+    @Tag("Web")
     @ParameterizedTest(name = "Отображение тега {0}")
     void checkingDisplayOfCoverFilterTag(String filterСheckbox, String tagName) {
         open("https://www.ozon.ru/");
@@ -39,12 +41,13 @@ public class OzonTest extends TestBase {
     }
 
     @EnumSource(ProfileMenu.class)
-    @DisplayName("1")
-    @Tag("1")
-    @Tag("1")
-    @ParameterizedTest(name = "{0}")
-    void checkingDisplayOfAnonymousMenuItem(String menuItem) {
+    @DisplayName("Пункты меню анонимного пользователя")
+    @Tag("Blocker")
+    @Tag("High")
+    @Tag("Web")
+    @ParameterizedTest(name = "Отображение пункта меню {0}")
+    void checkingDisplayOfAnonymousMenuItem(ProfileMenu profileMenu) {
         open("https://www.ozon.ru/");
-        $(".g5j6").shouldHave(text(menuItem));
+        $(".g5j6").shouldHave(text(profileMenu.getProfileMenu()));
     }
 }
