@@ -1,0 +1,71 @@
+Test Suite #3: Пункты меню неавторизованного пользователя
+
+    ==============================================
+
+    Test Case #1
+        Title: Отображение пункта меню "Войти"
+
+        Severity: Blocker
+        Priority: High
+        Tags: Web
+
+        Preconditions: Неавторизованный в системе пользователь
+
+        Steps to reproduce:
+        1. Откыть страницу https://www.ozon.ru/
+
+        Expected Result:
+        Отображается пункт "Войти" в панели меню пользователя
+
+    ==============================================
+
+    Test Case #2
+        Title: Отображение пункта меню "Заказы"
+
+        Severity: Blocker
+        Priority: High
+        Tags: Web
+
+        Preconditions: Неавторизованный в системе пользователь
+
+        Steps to reproduce:
+        1. Откыть страницу https://www.ozon.ru/
+
+        Expected Result:
+        Отображается пункт "Заказы" в панели меню пользователя
+
+    ==============================================
+
+    Test Case #3
+        Title: Отображение пункта меню "Избранное"
+
+        Severity: Blocker
+        Priority: High
+        Tags: Web
+
+        Preconditions: Неавторизованный в системе пользователь
+
+        Steps to reproduce:
+        1. Откыть страницу https://www.ozon.ru/
+
+        Expected Result:
+        Отображается пункт "Избранное" в панели меню пользователя
+
+    ==============================================
+
+    Test Case #4
+        Title: Отображение пункта меню "Корзина"
+
+        Severity: Blocker
+        Priority: High
+        Tags: Web
+
+        Preconditions: Неавторизованный в системе пользователь
+
+        Steps to reproduce:
+        1. Откыть страницу https://www.ozon.ru/
+
+        Expected Result:
+        Отображается пункт "Корзина" в панели меню пользователя
+
+    ==============================================
