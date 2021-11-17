@@ -24,8 +24,7 @@ public class OzonTest extends TestBase {
     @ParameterizedTest(name = "Отображение товара {0} в результатах поиска")
     void checkingBookInSearchResults(String searchQuery) {
         open("https://www.ozon.ru/");
-        $("[name='text']").setValue("Все о Муми-троллях").submit();
-        $(".a9x3").shouldHave(text(searchQuery));
+        $("[name='text']").setValue("Всё о Муми-троллях").submit();
         $$("[class='b3a6 a3m3']").shouldHave(texts(searchQuery));
     }
 
