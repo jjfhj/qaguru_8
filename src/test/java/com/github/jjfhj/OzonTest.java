@@ -5,8 +5,12 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import java.util.List;
+
+import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -49,5 +53,19 @@ public class OzonTest extends TestBase {
     void checkingDisplayOfAnonymousMenuItem(ProfileMenu profileMenu) {
         open("https://www.ozon.ru/");
         $(".g5j6").shouldHave(text(profileMenu.getProfileMenu()));
+    }
+
+    @MethodSource("com.github.jjfhj.CatalogItems#productCategories")
+    @DisplayName("Подкатегории на страницах товарных категорий")
+    @Tag("Minor")
+    @Tag("Low")
+    @Tag("Web")
+    @ParameterizedTest(name = "Отображение подкатегорий на странице товарной категории {0}")
+    void checkingProductCategoriesInCatalog(String catalogItems, List<String> goodsCategories) {
+        open("https://www.ozon.ru/");
+        refresh(); // Для закрытия модального окна "Выбирайте лучшее!", альтернативными методами не получилось решить
+        $$(".ui-e6").findBy(text("Каталог")).click();
+        $$(".g5r1").findBy(text(catalogItems)).$(".g5s7").click();
+        $$(".cw2").shouldHave(texts(goodsCategories));
     }
 }
