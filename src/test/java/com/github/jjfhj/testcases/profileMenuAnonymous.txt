@@ -12,7 +12,7 @@ Test Suite #3: Пункты меню неавторизованного поль
         Preconditions: Неавторизованный в системе пользователь
 
         Steps to reproduce:
-        1. Откыть страницу https://www.ozon.ru/
+        1. Открыть страницу https://www.ozon.ru/
 
         Expected Result:
         Отображается пункт "Войти" в панели меню пользователя
@@ -29,7 +29,7 @@ Test Suite #3: Пункты меню неавторизованного поль
         Preconditions: Неавторизованный в системе пользователь
 
         Steps to reproduce:
-        1. Откыть страницу https://www.ozon.ru/
+        1. Открыть страницу https://www.ozon.ru/
 
         Expected Result:
         Отображается пункт "Заказы" в панели меню пользователя
@@ -46,7 +46,7 @@ Test Suite #3: Пункты меню неавторизованного поль
         Preconditions: Неавторизованный в системе пользователь
 
         Steps to reproduce:
-        1. Откыть страницу https://www.ozon.ru/
+        1. Открыть страницу https://www.ozon.ru/
 
         Expected Result:
         Отображается пункт "Избранное" в панели меню пользователя
@@ -63,7 +63,7 @@ Test Suite #3: Пункты меню неавторизованного поль
         Preconditions: Неавторизованный в системе пользователь
 
         Steps to reproduce:
-        1. Откыть страницу https://www.ozon.ru/
+        1. Открыть страницу https://www.ozon.ru/
 
         Expected Result:
         Отображается пункт "Корзина" в панели меню пользователя

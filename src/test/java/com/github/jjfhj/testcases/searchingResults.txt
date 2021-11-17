@@ -9,7 +9,7 @@ Test Suite #1: Результаты поиска
         Priority: High
         Tags: Web
 
-        Preconditions: Откыта страница https://www.ozon.ru/
+        Preconditions: Открыта страница https://www.ozon.ru/
 
         Steps to reproduce:
         1. В поле поиска ввести значение "Всё о Муми-троллях"
@@ -20,14 +20,14 @@ Test Suite #1: Результаты поиска
 
     ==============================================
 
-    Test Case #1
+    Test Case #2
         Title: Отображение товара "Всё о Муми-троллях. Книга 2" в результатах поиска
 
         Severity: Blocker
         Priority: High
         Tags: Web
 
-        Preconditions: Откыта страница https://www.ozon.ru/
+        Preconditions: Открыта страница https://www.ozon.ru/
 
         Steps to reproduce:
         1. В поле поиска ввести значение "Всё о Муми-троллях"

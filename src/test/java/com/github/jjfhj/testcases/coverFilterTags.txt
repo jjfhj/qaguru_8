@@ -9,7 +9,7 @@ Test Suite #2: Теги фильтра "Обложка"
         Priority: Low
         Tags: Web
 
-        Preconditions: Откыта страница https://www.ozon.ru/
+        Preconditions: Открыта страница https://www.ozon.ru/
 
         Steps to reproduce:
         1. В поле поиска ввести значение "Вторая жизнь Уве"
@@ -28,7 +28,7 @@ Test Suite #2: Теги фильтра "Обложка"
         Priority: Low
         Tags: Web
 
-        Preconditions: Откыта страница https://www.ozon.ru/
+        Preconditions: Открыта страница https://www.ozon.ru/
 
         Steps to reproduce:
         1. В поле поиска ввести значение "Вторая жизнь Уве"
