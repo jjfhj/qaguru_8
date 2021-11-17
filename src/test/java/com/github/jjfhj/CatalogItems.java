@@ -9,8 +9,8 @@ public class CatalogItems {
 
     public static Stream<Arguments> productCategories() {
         return Stream.of(
-                Arguments.of("Умный дом и безопасность", List.of("Охранные системы, Видеонаблюдение, Умный дом")),
-                Arguments.of("Моноблоки и системные блоки", List.of("Системные блоки, Моноблоки"))
+                Arguments.of("Умный дом и безопасность", List.of("Охранные системы Видеонаблюдение Умный дом")),
+                Arguments.of("Моноблоки и системные блоки", List.of("Системные блоки Моноблоки"))
         );
     }
 }
