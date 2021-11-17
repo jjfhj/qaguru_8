@@ -41,7 +41,7 @@ public class OzonTest extends TestBase {
     }
 
     @EnumSource(ProfileMenu.class)
-    @DisplayName("Пункты меню анонимного пользователя")
+    @DisplayName("Пункты меню неавторизованного пользователя")
     @Tag("Blocker")
     @Tag("High")
     @Tag("Web")
