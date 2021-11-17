@@ -12,7 +12,7 @@ Test Suite #1: Результаты поиска
         Preconditions: Откыта страница https://www.ozon.ru/
 
         Steps to reproduce:
-        1. В поле поиска ввести значение "Все о Муми-троллях"
+        1. В поле поиска ввести значение "Всё о Муми-троллях"
         2. Нажать на клавишу Enter
 
         Expected Result:
@@ -30,7 +30,7 @@ Test Suite #1: Результаты поиска
         Preconditions: Откыта страница https://www.ozon.ru/
 
         Steps to reproduce:
-        1. В поле поиска ввести значение "Все о Муми-троллях"
+        1. В поле поиска ввести значение "Всё о Муми-троллях"
         2. Нажать на клавишу Enter
 
         Expected Result:
