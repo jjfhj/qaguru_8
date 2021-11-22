@@ -13,6 +13,7 @@ import java.util.List;
 import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
+import static com.github.jjfhj.TestData.OZON_URL;
 
 public class OzonTest extends TestBase {
 
@@ -23,7 +24,7 @@ public class OzonTest extends TestBase {
     @Tag("Web")
     @ParameterizedTest(name = "Отображение товара {0} в результатах поиска")
     void checkingBookInSearchResults(String searchQuery) {
-        open("https://www.ozon.ru/");
+        open(OZON_URL);
         $("[name='text']").setValue("Всё о Муми-троллях").submit();
         $$("[class='b3a6 a3m3']").shouldHave(texts(searchQuery));
     }
@@ -38,7 +39,7 @@ public class OzonTest extends TestBase {
     @Tag("Web")
     @ParameterizedTest(name = "Отображение тега {0}")
     void checkingDisplayOfCoverFilterTag(String filterСheckbox, String tagName) {
-        open("https://www.ozon.ru/");
+        open(OZON_URL);
         $("[name='text']").setValue("Вторая жизнь Уве").submit();
         $$(".ui-D6").findBy(text(filterСheckbox)).click();
         $("[class='ui-l5 ui-l6']").shouldHave(text(tagName));
@@ -51,7 +52,7 @@ public class OzonTest extends TestBase {
     @Tag("Web")
     @ParameterizedTest(name = "Отображение пункта меню {0}")
     void checkingDisplayOfAnonymousMenuItem(ProfileMenu profileMenu) {
-        open("https://www.ozon.ru/");
+        open(OZON_URL);
         $(".g5j6").shouldHave(text(profileMenu.getProfileMenu()));
     }
 
@@ -62,7 +63,7 @@ public class OzonTest extends TestBase {
     @Tag("Web")
     @ParameterizedTest(name = "Отображение подкатегорий на странице товарной категории {0}")
     void checkingProductCategoriesInCatalog(String catalogItems, List<String> goodsCategories) {
-        open("https://www.ozon.ru/");
+        open(OZON_URL);
         refresh(); // Для закрытия модального окна "Выбирайте лучшее!", альтернативными методами не получилось решить
         $$(".ui-e6").findBy(text("Каталог")).click();
         $$(".g5r1").findBy(text(catalogItems)).$(".g5s7").click();
